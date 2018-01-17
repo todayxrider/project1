@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Attendance/Payroll-Admin--Protected-Massachussets General Hospital</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/images/favicon.ico" rel="icon">
+
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="assets/css/master.css">
+
+    </head>
+
+    <body >
+        <div id="page-preloader"><span class="spinner"></span></div>
+
+        <!-- Navigation -->
+        <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+        <header class="header">
+            <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container relative-nav-container">
+                    <a class="toggle-button visible-xs-block" data-toggle="collapse" data-target="#navbar-collapse">
+                        <i class="fa fa-navicon"></i>
+                    </a>
+                    <a class="navbar-brand scroll" href="admin_doctors.php">
+                        <img class="normal-logo hidden-xs" src="assets/images/mghlogo_b.png" alt="mghlogo_b.png"/>
+                        <img class="inverse-logo hidden-xs" src="assets/images/mghlogo.png" alt="mghlogo.png"/>
+                        <!--<img class="visible-xs-block" src="assets/images/logo-sign2.png" width="40" height="44" alt="logo"/>-->
+                    </a>
+                    <ul class="nav navbar-nav navbar-right nav-icons wrap-user-control">
+                        <li><a id="search-open" href="#fakelink"><i class="fa fa-search"></i></a></li>
+                        <li class="open-signup">
+                            <a href="#fakelink"><i class="fa fa-user"></i></a>
+                            <div class="wrap-login-signup">
+                                <div role="tabpanel">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs-alt nav-tabs-one" role="tablist">
+                                        <li role="presentation" class="active"><a  href="#" aria-controls="signup" role="tab" data-toggle="tab">Welcome: <?php echo $row['dname'];?></a></li>
+                                        
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active text-center" id="signup">
+                                            <div class="signup-content">
+                                              <span class="or-sep"></span></br>
+                                                <form class="form" action="Logout.php" target="new">
+                                                    
+                                                    <div class="form-group">
+                                                        <input type="Submit" name="logout" class="submit-button form-control" value="Logout" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="login">
+
+                                            <div class="signup-content">
+                                                <h5>Your Account</h5>
+                                                <form class="form">
+                                                    <div class="form-group">
+                                                        <input placeholder="Login" type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input placeholder="Password" type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="submit" class="submit-button form-control" value="Login" />
+                                                    </div>
+                                                </form>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> <div class="navbar-collapse collapse floated" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-with-inside clearfix navbar-right with-border">  <li class=" ">
+                                <a href="#">Departments</a>
+                                <div class=" wrap-inside-nav">
+                                    <div class="inside-col">
+                                        <ul class="inside-nav">
+                                            <li><a href="#">All Departments</a></li>
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+
+                                <a href="#">Doctor's</a>
+
+                                <div class=" wrap-inside-nav">
+
+                                    <div class="inside-col">
+
+                                        <ul class="inside-nav">
+
+                                            <li><a href="#">Doctor's Section</a></li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Nurses</a>
+
+                                <div class="wrap-inside-nav">
+
+                                    <div class=" inside-col">
+
+                                        <ul class="inside-nav">
+
+                                            <li><a href="#">Nurse's Section</a></li>
+
+                                            
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Patient's</a>
+
+                                <div class=" wrap-inside-nav">
+
+                                    <div class=" inside-col">
+
+                                        <ul class="inside-nav">
+
+                                            <li><a href="#">Manage-In/Admit patent's</a></li>
+
+                                            <li><a href="#">Manage-Out/Discharge patent's</a></li>
+
+                                            
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            
+
+                            <li>
+
+                                <a href="#">Appointments</a>
+
+                                <div class=" wrap-inside-nav">
+
+                                    <div class=" inside-col">
+
+                                        <ul class="inside-nav">
+
+                                            <li><a href="#">Appointments Section</a></li>
+
+                                           
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Laboratory</a>
+
+                                <div class=" wrap-inside-nav">
+
+                                    <div class=" inside-col">
+
+                                        <ul class="inside-nav">
+
+                                            <li><a href="#">Laboratory Section</a></li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            
+                            
+                            
+
+                            <li>
+                                <a href="#">Extra's</a>
+                                <div class=" wrap-inside-nav">
+                                    <div class="inside-col">
+                                        <ul class="inside-nav">
+                                            <li><a href="#">Certification System</a></li>
+                                            <li><a href="#">Bed Allotment's</a></li>
+                                            <li><a href="#">Attendance & Payroll</a></li>
+                                            <li><a href="#">Sms & Email System </a></li>
+                                            <li><a href="#">Setting's</a></li>
+                                            
+                                            
+                                            
+                                            
+                                            <li><a href="#">Bed Allotment's</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navbar-search">
+                    <div class="container">
+                        <form role="search">
+                            <div class="input-group">
+                                <input type="text" placeholder="Type your search..." class="form-control" autocomplete="off">
+                                <span class="input-group-btn">
+                                    <button type="reset" class="btn search-close" id="search-close">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header><!--/.header -->
+
+        <!-- Elements Header -->
+        <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+        <section class="doconduty-header">
+            <div class="header-caption">
+                <h1 style="color:white;">Admin Panel</h1>
+                <p class="small"  style="color:white;">Attendance & Payroll Management System</p>
+            </div>
+        </section>
+
+        <section class="elements">
+            <div class="container">
+
+                <!-- Typographics -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="row">
+                    <div>
+                        
+
+                        <p class="subhead" align="center">Attendance & Payroll Management: </p>				
+                        
+                        <p class="large" align="center">Easily Maintain & input All Data regarding hospital Attendance & payroll of Doctors and nurses,(New Attendance,Payroll System)For Admin Only,If you are not please Logout.</p>
+                        
+                    </div>
+                </div><!--row-->
+            </div>
+
+
+            <div class="divider">
+                <div class="striped-icon">
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="container">		
+                
+
+                
+                <!-- Tabs -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div role="tabpanel">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs-alt nav-tabs-one" role="tablist" style="width:1200px;">
+
+                                <li role="presentation" class="active" style="width:300px;" align="center"><a  href="#home" aria-controls="home" role="tab" data-toggle="tab">Doctor Attendance</a></li>
+                                <li role="presentation"  style="width:300px;" align="center"><a  href="#new" aria-controls="new" role="tab" data-toggle="tab">Nurse Attendance</a></li>
+                                <li role="presentation"  style="width:300px;" align="center"><a  href="#new_b" aria-controls="new_b" role="tab" data-toggle="tab">Doctor Payroll</a></li>
+                                 <li role="presentation"  style="width:300px;" align="center"><a  href="#new_d" aria-controls="new_d" role="tab" data-toggle="tab">Nurse Payroll</a></li>
+                                <li role="presentation"  style="width:300px;" align="center"><a  href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Doctor Present/Absent</a></li>
+                                <li role="presentation"  style="width:300px;" align="center"><a  href="#profile1" aria-controls="profile1" role="tab" data-toggle="tab">Nurse Present/Absent</a></li>
+                               </ul>
+                               
+                           
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                 
+                                 <table id="new_app" border="0" width="1200">
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Doctor's Attendance</th></tr>
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Doctor Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text" size="50" placeholder="Doctor Name">
+                                 </td>
+                                 <td  style="padding-top: 10px;" width="200">&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Doctor Id:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Doctor Id"></td>
+                                 </tr>
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;"  ><strong> Doctor S-S-N:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Doctor S-S-N">
+                                 </td>
+                                 <td  style="padding-top: 10px;" >&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Doctor Phone:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text" size="50" placeholder="Doctor Phone"></td>
+                                 </tr>
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Doctor Depart:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;"><input type="text" size="50" placeholder="Doctor Department">
+                                 </td>
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Gender:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><select style="width:365px; height:35px;">
+                                 <option>Select</option>
+                                 
+								 
+</select></td>
+                                 </tr>
+                                 
+                                 
+                                 <tr>
+                                 
+                                 <td style="padding-top: 10px; " ><strong> In-Time:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="time" style="width:365px; height:35px;"></td>
+<td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Out-Time:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="time" style="width:365px; height:35px;"></td>
+                                 
+                                 
+                                 </tr>
+                                 
+                               
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong> Date:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Current Status:</strong></td>
+                                 <td style="padding-top: 10px; text-align:Left;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="Present">Present&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="Absent" >Absent</td>
+                                 
+                                 
+                                 </tr>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                
+                                 
+                                 <tr >
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Please make Sure that All information and timings are valid,Thanks Admin</th></tr><tr>
+                                 <td style="padding-top: 10px; border:double; padding-bottom:8px; padding-left:20px;" colspan="5" align="">
+                                 <input type="text" id="search" size="50" placeholder="Type Doctor name to Search">&nbsp;&nbsp;
+                                 <input type="button" class="btn btn-success btn-sm" id="clr" value="Search" style="width:150px; height:38px;">
+                               
+                             
+                               
+                               <input type="reset" class="btn btn-success btn-sm" id="clr" value="Clear" style="width:150px; height:38px;">
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="reset" class="btn btn-success btn-sm" id="clr" value="New Attendance" style="width:180px; height:38px;">
+                               <input type="reset" class="btn btn-success btn-sm" id="clr" value="Update Out-Time" style="width:180px; height:38px;">
+                                 </td>
+                                 
+                                 
+                                 
+                                 
+                                 </table>
+                                 
+                                 
+                                 <table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >On-Duty Doctor Records</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                
+                              </div>
+                              
+                              
+                              
+                              
+                              <div role="tabpanel" class="tab-pane" id="new">
+                                 
+                                                          <table id="new_app" border="0" width="1200">
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Nurse's Attendance</th></tr>
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Nurse Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Nurse Name">
+                                 </td>
+                                 <td  style="padding-top: 10px;" width="200">&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Nurse Id:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Nurse Id"></td>
+                                 </tr>
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;"  ><strong> Nurse S-S-N:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Nurse S-S-N">
+                                 </td>
+                                 <td  style="padding-top: 10px;" >&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Nurse Phone:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text" size="50" placeholder="Nurse Phone"></td>
+                                 </tr>
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Nurse Depart:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;"><input type="text" size="50" placeholder="Nurse Department">
+                                 </td>
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Gender:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><select style="width:365px; height:35px;">
+                                 <option>Select</option>
+                                 
+								 
+</select></td>
+                                 </tr>
+                                 
+                                 
+                                 <tr>
+                                 
+                                 <td style="padding-top: 10px; " ><strong> In-Time:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="time" style="width:365px; height:35px;"></td>
+<td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Out-Time:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="time" style="width:365px; height:35px;"></td>
+                                 
+                                 
+                                 </tr>
+                                 
+                               
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong> Date:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Current Status:</strong></td>
+                                 <td style="padding-top: 10px; text-align:Left;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="Present">Present&nbsp;&nbsp;&nbsp;<input type="radio" name="status" value="Absent" >Absent</td>
+                                 
+                                 
+                                 </tr>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                
+                                 
+                                 <tr >
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Please make Sure that All information and timings are valid,Thanks Admin</th></tr><tr>
+                                 <td style="padding-top: 10px; border:double; padding-bottom:8px; padding-left:20px;" colspan="5" align="">
+                                 <input type="text" id="search" size="50" placeholder="Type Nurse name to Search">&nbsp;&nbsp;
+                                 <input type="button" class="btn btn-success btn-sm" id="clr" value="Search" style="width:150px; height:38px;">
+                               
+                             
+                               
+                               <input type="reset" class="btn btn-success btn-sm" id="clr" value="Clear" style="width:150px; height:38px;">
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="reset" class="btn btn-success btn-sm" id="clr" value="New Attendance" style="width:180px; height:38px;">
+                               <input type="reset" class="btn btn-success btn-sm" id="clr" value="Update Out-Time" style="width:180px; height:38px;">
+                                 </td>
+                                 
+                                 
+                                 
+                                 
+                                 </table>
+                                 
+                                 
+                                 <table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >On-Duty Nurse Records</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                
+                              </div>
+                              
+                              
+                              
+                              
+                              
+                              <div role="tabpanel" class="tab-pane" id="new_b">
+                                 
+                                 <table id="new_app" border="0" width="1200">
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Payroll Management(For Doctor's)</th></tr>
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Doctor Details</th></tr>
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Department Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Department Name">
+                                 </td>
+                                 <td  style="padding-top: 10px;"width="200">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px;"  ><strong> Doctor Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Doctor Name">
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Doctor id:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Doctor Id"></td>
+                                
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Doctor S-S-N:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Doctor S-S-N"></td>
+                                 </tr>
+                                 
+                                 </tr>
+                               
+                                
+                                <tr>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Address:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="text"  size="50" placeholder="Payment Sending Address"></td>
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Hire Date:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 
+                                 
+                                
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr >
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Salary Calculator($USD)</th></tr><tr>
+                                 <td style="padding-top: 10px;" ><strong>Payment Type:</strong></td><td style="padding-top: 10px; text-align:right;"><select  style="width:365px; height:35px;" >
+                                 <option>Select</option>
+                                 <option>Cash</option>
+                                 <option>Cheque</option>
+                                 </select>
+                                 </td>
+                                 <td  style="padding-top: 10px;"width="200">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px;"  ><strong> Salary Month:</strong></td><td style="padding-top: 10px; text-align:right;"><select  style="width:365px; height:35px;" >
+                                 <option>Select</option>
+                                 <option>January</option>
+                                 <option>Febuary</option>
+                                 <option>March</option>
+                                 <option>April</option>
+                                 <option>May</option>
+                                 <option>June</option>
+                                 <option>July</option>
+                                 <option>August</option>
+                                 <option>September</option>
+                                 <option>October</option>
+                                 <option>November</option>
+                                 <option>December</option>
+                                 </select>
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Total Hours:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="30" placeholder="Total Hours">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-success btn-sm"  value="Get" style="width:120px; height:38px;"></td>
+                                
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Total Amount</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="30" placeholder="Total Amount">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="sumit" class="btn btn-success btn-sm"  value="$" style="width:120px; height:38px;">
+                                 
+                                 </td>
+                                 </tr>
+                                 
+                                 </tr>
+                               
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong> Date From:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Date To:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="date"  style="width:365px; height:35px;" ></td>
+                                </tr>
+                                
+                                <tr>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Creation Date:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="date"  style="width:220px; height:35px;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-success btn-sm"  value="Get" style="width:120px; height:38px;"></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;"  ><strong>Additional Bonus:</strong></td>
+                                 <td style="padding-top: 10px; text-align:left; padding-bottom: 30px;" >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Bonus" value="Yes">Yes&nbsp;&nbsp;&nbsp;<input type="radio" name="Bonus" value="no" >No</td>
+                                 </tr>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 <tr>
+                                <td Align="" colspan="5" style=" padding-bottom:10px;  " ><input type="text" id="search" size="22" placeholder="Type Doctor Name">&nbsp; &nbsp; &nbsp; <input type="button" class="btn btn-success btn-sm"  value="Search" style="width:150px; height:40px;">
+                                 
+                               
+                               
+                               &nbsp;  <input type="reset" class="btn btn-success btn-sm"  value="Clear" style="width:150px; height:40px;">
+                               </td>
+                                 </tr>
+                                 
+                                 
+                                 
+                                 </table>
+                                 
+                                 
+                                 
+                                 <table  width="1200" height="300" border="1">
+                                 
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >Paid Salary Doctors( Search by name)</th></tr>
+                                 <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center; padding-top:10px; padding-bottom:10px;" colspan="6" ><input type="text"  size="30" placeholder="Type Doctor Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="30" placeholder="Type Month">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Fetch Details" style="width:180px; height:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Show All" style="width:180px; height:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Clear" style="width:180px; height:35px;"></th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+                                 
+                                 
+                                 
+                                 
+                                
+                              </div>
+                              
+                              
+                              
+                              
+                              
+                              
+                              <div role="tabpanel" class="tab-pane" id="new_d">
+                                 
+                                 <table id="new_app" border="0" width="1200">
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Payroll Management(For Nurse's)</th></tr>
+                                 <tr>
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Nurse Details</th></tr>
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Department Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Department Name">
+                                 </td>
+                                 <td  style="padding-top: 10px;"width="200">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px;"  ><strong> Nurse Name:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="text"  size="50" placeholder="Nurse Name">
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Nurse id:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Nurse Id"></td>
+                                
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Nurse S-S-N:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="50" placeholder="Nurse S-S-N"></td>
+                                 </tr>
+                                 
+                                 </tr>
+                               
+                                
+                                <tr>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Address:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="text"  size="50" placeholder="Payment Sending Address"></td>
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Hire Date:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 
+                                 
+                                
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr >
+                                 <th colspan="5" style="text-align:center; color:#F93; font-weight:bolder; border:double">Salary Calculator($USD)</th></tr><tr>
+                                 <td style="padding-top: 10px;" ><strong>Payment Type:</strong></td><td style="padding-top: 10px; text-align:right;"><select  style="width:365px; height:35px;" >
+                                 <option>Select</option>
+                                 <option>Cash</option>
+                                 <option>Cheque</option>
+                                 </select>
+                                 </td>
+                                 <td  style="padding-top: 10px;"width="200">&nbsp;</td>
+                                 
+                                <td style="padding-top: 10px;"  ><strong> Salary Month:</strong></td><td style="padding-top: 10px; text-align:right;"><select  style="width:365px; height:35px;" >
+                                 <option>Select</option>
+                                 <option>January</option>
+                                 <option>Febuary</option>
+                                 <option>March</option>
+                                 <option>April</option>
+                                 <option>May</option>
+                                 <option>June</option>
+                                 <option>July</option>
+                                 <option>August</option>
+                                 <option>September</option>
+                                 <option>October</option>
+                                 <option>November</option>
+                                 <option>December</option>
+                                 </select>
+                                 </tr>
+                                 
+                                
+                                 
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong>Total Hours:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="30" placeholder="Total Hours">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-success btn-sm"  value="Get" style="width:120px; height:38px;"></td>
+                                
+                                 
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;" ><strong>Total Amount</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="text"  size="30" placeholder="Total Amount">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="sumit" class="btn btn-success btn-sm"  value="$" style="width:120px; height:38px;">
+                                 
+                                 </td>
+                                 </tr>
+                                 
+                                 </tr>
+                               
+                                 <tr>
+                                 <td style="padding-top: 10px;" ><strong> Date From:</strong></td><td style="padding-top: 10px; text-align:right;"><input type="date"  style="width:365px; height:35px;" ></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px;"  ><strong>Date To:</strong></td>
+                                 <td style="padding-top: 10px; text-align:right;" ><input type="date"  style="width:365px; height:35px;" ></td>
+                                </tr>
+                                
+                                <tr>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;" ><strong> Creation Date:</strong></td><td style="padding-top: 10px; padding-bottom: 30px; text-align:right;"><input type="date"  style="width:220px; height:35px;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-success btn-sm"  value="Get" style="width:120px; height:38px;"></td>
+                                 <td  style="padding-top: 10px;">&nbsp;</td>
+                                 <td style="padding-top: 10px; padding-bottom: 30px;"  ><strong>Additional Bonus:</strong></td>
+                                 <td style="padding-top: 10px; text-align:left; padding-bottom: 30px;" >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Bonus" value="Yes">Yes&nbsp;&nbsp;&nbsp;<input type="radio" name="Bonus" value="no" >No</td>
+                                 </tr>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 <tr>
+                                <td Align="" colspan="5" style=" padding-bottom:10px;  " ><input type="text" id="search" size="22" placeholder="Type Nurse Name">&nbsp; &nbsp; &nbsp; <input type="button" class="btn btn-success btn-sm"  value="Search" style="width:150px; height:40px;">
+                                 
+                               
+                               
+                               &nbsp;  <input type="reset" class="btn btn-success btn-sm"  value="Clear" style="width:150px; height:40px;">
+                               </td>
+                                 </tr>
+                                 
+                                 
+                                 
+                                 </table>
+                                 
+                                 
+                                 
+                                 <table  width="1200" height="300" border="1">
+                                 
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >Paid Salary Nurse's( Search by name)</th></tr>
+                                 <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center; padding-top:10px; padding-bottom:10px;" colspan="6" ><input type="text"  size="30" placeholder="Type Nurse Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="30" placeholder="Type Month">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Fetch Details" style="width:180px; height:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Show All" style="width:180px; height:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-success btn-sm"  value="Clear" style="width:180px; height:35px;"></th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+                                 
+                                 
+                                 
+                                 
+                                
+                              </div>
+                              
+                    
+                              
+                              
+                              
+                              
+                              
+        
+        <div role="tabpanel" class="tab-pane" id="profile">
+        <table width="1200" style="text-align:left" border="0"><tr>
+                                <td><input type="date" style="width:750px;  height:40px;"> 
+                               &nbsp;&nbsp; <input type="button" class="btn btn-success btn-sm"  value="Search" style="width:150px;"> &nbsp;&nbsp; <input type="button" class="btn btn-success btn-sm"  value="Show All" style="width:150px;"></td>
+                                </tr></table>
+                                </br>
+        
+        
+                                <table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >Presents(Doctor's)</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+
+</br>
+
+
+<table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bolder; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bold; border:double; text-align:center" colspan="6" >Absents(Doctor's)</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+
+
+        
+                              </div>
+                              
+                              
+                           <div role="tabpanel" class="tab-pane" id="profile1">
+        <table width="1200" style="text-align:left" border="0"><tr>
+                                <td><input type="date" style="width:750px;  height:40px;"> 
+                               &nbsp;&nbsp; <input type="button" class="btn btn-success btn-sm"  value="Search" style="width:150px;"> &nbsp;&nbsp; <input type="button" class="btn btn-success btn-sm"  value="Show All" style="width:150px;"></td>
+                                </tr></table>
+                                </br>
+        
+        
+                                <table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bold; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bolder; border:double; text-align:center" colspan="6" >Presents(Nurse's)</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+
+</br>
+
+
+<table  width="1200" height="300" border="1">
+                                 
+    <thead style="color:#F93; font-weight:bold; border:double">
+    <tr>
+                                 <th style="color:#F93; font-weight:bolder; border:double; text-align:center" colspan="6" >Absents(Nurse's)</th>
+                                 </tr>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            <th>Head 4</th>
+            <th>Head 5</th>
+            <th>Head 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
+            <td>Content 5</td>
+            <td>Content 6</td>
+        </tr>
+    </tbody>
+</table>
+
+
+        
+                              </div>
+           
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                                
+                          </div>
+
+
+                      </div>
+                  </div><!--col--><!--col-->
+              </div><!--row-->
+
+                <div class="row">
+                    <div class="row-same-height"><!--col-->			
+                    </div><!--row same height-->
+                </div><!--row-->
+            </div><!--container--><!-- Buttons -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ --><!--container-->
+
+            <!--Social icons--><!--social icons--><!--social icons--><!--Standart columns-->
+            <div class="container">
+              <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <!-- Contacts One -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            <section class="contacts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="contacts-block bottom-border">					
+                                <h5>Contacts</h5>					
+                                <ul>
+                                    <li>
+                                        <p><i class="fa fa-map-marker"></i>55 Fruit Street,Boston, MA 02114</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fa fa-phone"></i>+ 617-726-2000, +617-724-8800</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fa fa-envelope"></i><a href="mailto:support@rosetta.com">support@mgh.com</a>  </p>
+
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="twitter-block bottom-border">
+                                <h5 class="offset">Twitter <a href="#fakelink"><i class="fa fa-undo pull-right"></i></a></h5>
+                                <div class="twitter-wrap offset left-border">
+                                    <p><strong>&#64;innocent Sam</strong> Services are really good and staff is really friendly.<br> 
+                                      <span>1 days ago</span></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="subscribe-info">
+                                <h5 class="offset">Subscribe</h5>
+                                <div class="subscribe-wrap offset left-border">
+                                    <form>
+                                        <label for="contacts-email">Be aware of news</label>
+                                        <div class="form-group has-feedback">
+                                            <input type="email" class="form-control " id="contacts-email" placeholder="Enter email">
+                                            <i class="fa fa-pencil-square fa-lg form-control-feedback"></i>
+                                        </div>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Copyright One-->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ --><!-- Contacts Two -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ --><!-- Copyright Two-->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            <section class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>&copy; 2011-2014 – Trademarks and brands are the property of IT PROFESSIONALS</p>
+                            <p><a class="text-primary" href="#fakelink">Privacy Policy</a> -  All rights reserved</p>			
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="copyright-links list-inline">
+                                <li><a href="https://www.facebook.com/"><i class="icon-circle icon-facebook"></i></a></li>
+                                <li><a href="https://www.twitter.com/"><i class="icon-circle icon-twitter"></i></a></li>
+                                
+                            </ul>			
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </footer>		<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+        <!-- Include BOOTSTRAP plugins  -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Include plugins --> 
+        <script src="assets/js/jquery.mb.YTPlayer.js"></script>		
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.ui.effect.min.js"></script>
+        <script src="assets/js/modernizr.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/fancybox/jquery.fancybox.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <!-- Google maps -->    
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="assets/js/map.js"></script> 
+        <!-- Include local script calls -->  
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/highcharts.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>
